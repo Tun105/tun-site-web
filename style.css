@@ -1,0 +1,184 @@
+/* VARIABLES (pour réutiliser facilement les couleurs) */
+:root {
+    --color-background: #000000;
+    --color-text-light: #FFFFFF;
+    --color-accent-blue: #007bff; /* Bleu vif pour les boutons et icônes */
+    --color-accent-orange: #ffc107; /* Orange pour le bouton tertiaire */
+    --color-card-bg: #1a1a1a; /* Gris foncé pour la carte latérale */
+    --color-border: #333333;
+}
+
+/* BASE DU SITE (Dark Mode) */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text-light);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER/SECTION PRINCIPALE */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px 5%;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* CONTENU GAUCHE (Texte et Boutons) */
+.content-left {
+    flex: 2; /* Prend plus d'espace */
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    /* Soulignement bleu comme sur l'image */
+    border-bottom: 4px solid var(--color-accent-blue);
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+/* BOUTONS */
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+    /* IMPORTANT : Pour que le style du bouton s'applique sur l'élément <button> à l'intérieur du lien <a> */
+    width: 100%; 
+    height: 100%;
+}
+
+/* Style spécifique pour les liens autour des boutons (pour retirer le style de lien par défaut) */
+.btn-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--color-accent-blue);
+    color: var(--color-text-light);
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: var(--color-background);
+    color: var(--color-text-light);
+    border: 1px solid var(--color-border);
+}
+.btn-secondary:hover {
+    background-color: var(--color-card-bg);
+}
+
+.btn-tertiary {
+    background-color: var(--color-accent-orange);
+    color: var(--color-background);
+    font-size: 0.9em;
+    padding: 8px 15px;
+}
+.btn-tertiary:hover {
+    background-color: #e0a800;
+}
+
+/* CONTENU DROIT (La carte d'information) */
+.content-right {
+    flex: 1; /* Prend moins d'espace */
+    min-width: 300px;
+}
+
+.info-card {
+    background-color: var(--color-card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.card-title i {
+    color: var(--color-accent-blue);
+    font-size: 1.5em;
+}
+
+.info-card h2 {
+    font-size: 1.2em;
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Style pour la liste de statistiques */
+.stats-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.stats-list li {
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+.reliability-note {
+    font-size: 0.9em;
+    color: #aaaaaa; /* Texte gris plus discret */
+    line-height: 1.4;
+}
+
+/* SECTION DES AVANTAGES */
+.benefits-section {
+    padding: 0 5% 50px;
+    margin-top: 50px;
+}
+
+.benefits-section h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.benefits-list i {
+    color: var(--color-accent-blue);
+    margin-right: 10px;
+}
+
+/* FOOTER */
+footer {
+    padding: 20px 5%;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.8em;
+    color: #666;
+    display: flex;
+    justify-content: flex-start; /* Aligne le copyright à gauche */
+}
